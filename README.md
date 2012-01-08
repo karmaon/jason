@@ -4,14 +4,21 @@ Jason is a Kohana implementation of the JSON-RPC protocol for SolidCoin, but can
 
 ## Usage
 
-Either this
-
-	$jason = new Jason('solidcoin');
-	$jason->sc_getinfo();
-
-or this.
-
 	Jason::instance('liecoin')->sendtoaddress('king_colbee_address', 666);
+
+Like so.
+
+	$jason = Jason::instance('solidcoin');
+	
+	try
+	{
+		$info = $jason->getinfo();
+		print_r($info);
+	}
+	catch (Jason_Exception $e)
+	{
+		echo $e;
+	}
 
 ## Configuration
 

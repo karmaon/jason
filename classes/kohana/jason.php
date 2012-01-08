@@ -14,7 +14,7 @@ class Kohana_Jason {
 
 	protected $_id;
 
-	protected function __construct($name)
+	public function __construct($name)
 	{
 		$this->_name = $name;
 
