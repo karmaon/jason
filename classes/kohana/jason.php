@@ -69,7 +69,7 @@ class Kohana_Jason {
 			throw new Jason_Exception ('Incorrect response ID (request ID: '.$this->_id.', response ID: '.$response['id'].')');
 
 		if ( ! is_null($response['error']))
-			throw new Jason_Exception('Request error: '.print_r($response['error']));
+			throw new Jason_Exception('Request error: '.print_r($response['error'], TRUE));
 
 		$this->_id++;
 

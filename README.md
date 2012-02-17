@@ -12,7 +12,7 @@ Like so.
 	
 	try
 	{
-		$info = $jason->getinfo();
+		$info = $jason->sc_getinfo();
 		print_r($info);
 	}
 	catch (Jason_Exception $e)
